@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="发送">
+</body>
+</html>
+<script>
+    document.querySelector('input').onclick = function(){
+        var xhr = new XMLHttpRequest();
+
+        xhr.open('get','xxx.php?name=jack&skill=painting');
+
+        xhr.onload = function(){
+            console.log(xhr.responseText);
+        }
+
+        // xhr.setRequestHeader('heima','goodgoodstudy day day up');
+
+        xhr.send(null)
+    }
+</script>
